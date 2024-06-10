@@ -11,8 +11,16 @@ import streamlit as st
 @st.cache_data
 def read_all_fin_data(data_path):
     
-    with open(data_path+'quarter_ltm_dfs_dict.pickle', 'rb') as handle:
-        quarter_ltm_dfs_dict = pickle.load(handle)
+    #with open(data_path+'quarter_ltm_dfs_dict.pickle', 'rb') as handle:
+    #    quarter_ltm_dfs_dict = pickle.load(handle)
+    
+    with open(data_path+'quarter_ltm_dfs_dict1.pickle', 'rb') as handle:
+        quarter_ltm_dfs_dict1 = pickle.load(handle)
+    
+    with open(data_path+'quarter_ltm_dfs_dict2.pickle', 'rb') as handle:
+        quarter_ltm_dfs_dict2 = pickle.load(handle)
+        
+    quarter_ltm_dfs_dict = {**quarter_ltm_dfs_dict1, **quarter_ltm_dfs_dict2}
 
     with open(data_path+'subsector_quarter_ltm_dfs.pickle', 'rb') as handle:
         subsector_quarter_ltm_dfs = pickle.load(handle)
