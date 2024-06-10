@@ -15,7 +15,7 @@ st.set_page_config(page_title="Financial Statement Analysis", layout="wide")
 st.title("VID Template")
 st.sidebar.title('Choose Ticker')
 
-data_path = "/Users/dorukcanga/Desktop/vid/"
+data_path = ""
 
 quarter_ltm_dfs_dict, subsector_quarter_ltm_dfs, midsector_quarter_ltm_dfs, mainsector_quarter_ltm_dfs = read_all_fin_data(data_path)
 
